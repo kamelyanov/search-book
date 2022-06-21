@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Api from "./utils/Api"
+
+import Header from "./components/Header";
+import Forms from "./components/Forms";
+import BooksSection from "./components/BooksSection";
+
 
 function App() {
+  
+  function searchBooks (searchName) {
+    console.log(searchName)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page">
+      <Header />
+      <Forms 
+        searchBooks={searchBooks}
+        buttonText={'Начать поиск'} //прописать начать поиск или поиск... во время обработки запроса
+      />
+      <BooksSection />
     </div>
   );
 }
