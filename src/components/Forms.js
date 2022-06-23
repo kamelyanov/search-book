@@ -12,9 +12,7 @@ function Forms({searchBooks, buttonText}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    searchBooks ({
-      searchName: name,
-    })
+    searchBooks (name)
   }
   
   return (
