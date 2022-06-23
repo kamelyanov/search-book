@@ -1,10 +1,13 @@
-function Card() {
-  return (
+import React from "react";
+
+function Card({card}) {
+  console.log(card) 
+  return (      
     <div className="card">
-      <div className="card__cover"></div>
-      <p className="card__name"></p>
-      <p className="card__category"></p>
-      <p className="card__autors"></p>
+      <img className="card__cover" src={card.volumeInfo.imageLinks.smallThumbnail} alt=""/>
+      <p className="card__name">{card.volumeInfo.title}</p>
+      <p className="card__category">{card.volumeInfo.categories}</p>
+      <p className="card__autors">{card.volumeInfo.authors}</p> 
     </div>
   )
 }
