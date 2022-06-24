@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(../src/blocks/body/body.css);
+@import url(../src/blocks/header/header.css);
+@import url(../src/blocks/header/__title/header__title.css);
+@import url(../src/blocks/forms/forms.css);
+@import url(../src/blocks/forms/__button-sort/forms__button-sort.css);
+@import url(../src/blocks/forms/__button-submit/forms__button-submit.css);
+@import url(../src/blocks/forms/__input/forms__input.css);
+@import url(../src/blocks/forms/__search/forms__search.css);
+@import url(../src/blocks/forms/__sort/forms__sort.css);
+@import url(../src/blocks/booksSection/booksSection.css);
+@import url(../src/blocks/booksSection/__count/booksSection__count.css);
+@import url(../src/blocks/booksSection/__cards/booksSection__cards.css);
+@import url(../src/blocks/card/card.css);
+@import url(../src/blocks/card/__autors/card__autors.css);
+@import url(../src/blocks/card/__category/card__category.css);
+@import url(../src/blocks/card/__cover/card__cover.css);
+@import url(../src/blocks/card/__name/card__name.css);

@@ -1,0 +1,12 @@
+.card__name {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 5px 3px;
+  text-align: center;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

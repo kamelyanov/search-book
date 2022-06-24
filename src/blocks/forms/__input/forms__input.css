@@ -1,0 +1,10 @@
+.forms__input {
+  height: 100%;
+  border: 1px solid #000;
+	border-radius: 5px;
+  font-size: 14px;
+}
+
+.forms__input::placeholder {
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+.card__category {
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 5px;
+  font-weight: normal;
+  text-decoration: underline;
+  text-align: center;
+  max-height: 28px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

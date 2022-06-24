@@ -1,0 +1,12 @@
+.card__autors {
+  position: absolute;
+  bottom: 0;
+  margin: 5px;
+  font-size: 12px;
+  max-height: 28px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

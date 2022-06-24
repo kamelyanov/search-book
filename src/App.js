@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import Header from "./components/Header";
 import Forms from "./components/Forms";
@@ -6,27 +6,27 @@ import BooksSection from "./components/BooksSection";
 
 
 function App() {
-  const [bookData,setBookData] = useState([]); 
-  
+  const [bookData, setBookData] = useState([]);
+
   function searchBooks(search) {
-    fetch('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU', {
+    fetch('https://www.googleapis.com/books/v1/volumes?q=' + search + '&key=AIzaSyA6SaT23KNiiA6DnUfUQTvFeyAcQEkwnSU', {
       method: 'GET',
     })
-    .then((res) => {
-      return res.json(); 
-    })
-    .then(data => setBookData(data.items))
-    .catch(err => console.log(err))  
+      .then((res) => {
+        return res.json();
+      })
+      .then(data => setBookData(data.items))
+      .catch(err => console.log(err))
   }
-  
+
   return (
     <div className="page">
       <Header />
-      <Forms 
+      <Forms
         searchBooks={searchBooks}
-        buttonText={'Начать поиск'} //прописать начать поиск или поиск... во время обработки запроса
+        buttonText={'search'} //прописать начать поиск или поиск... во время обработки запроса
       />
-      <BooksSection 
+      <BooksSection
         bookData={bookData}
       />
     </div>

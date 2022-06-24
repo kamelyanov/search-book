@@ -1,0 +1,17 @@
+.forms__button-submit {
+  height: 100%;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #fff;
+	border-radius: 5px;
+}
+
+.forms__button-submit:hover {
+	transition: all 0.2s;
+	box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
+}
+
+.forms__button-submit:active {
+	background-color: #808080;
+}

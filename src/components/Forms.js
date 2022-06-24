@@ -1,8 +1,8 @@
 import React from "react"
 import { useState } from "react"
-import Sort from "./Sort"
 
-function Forms({searchBooks, buttonText}) {
+
+function Forms({ searchBooks, buttonText }) {
   const [name, setName] = useState('')
   const booksCategories = ["all", "art", "biography", "computers", "history", "medical", "poetry"]
 
@@ -12,32 +12,38 @@ function Forms({searchBooks, buttonText}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    searchBooks (name)
+    searchBooks(name)
   }
-  
+
   return (
     <section className="forms">
-      <form 
-        className="" 
+      <form
+        className="forms__search"
         onSubmit={handleSubmit}>
-        <fieldset className="form__set">
-          <label className="form__field">
-            <input
-              className="form__input"
-              placeholder="Введите название книги"
-              name="booksName"
-              value={name || ''}
-              onChange={handleNameChange}
-            />
-          </label>
-          <label>
-            <button className="forms__" type="submit">${buttonText}</button>
-          </label>
-        </fieldset>
+        <label className="forms__field">
+          <input
+            className="forms__input"
+            placeholder="input books name"
+            name="booksName"
+            value={name || ''}
+            onChange={handleNameChange}
+          />
+        </label>
+        <label>
+          <button className="forms__button-submit" type="submit">{buttonText}</button>
+        </label>
       </form>
-      <Sort 
-        booksCategories={booksCategories}
-      />
+      <form className="forms__sort">
+        <select className="forms__button-sort">
+          {
+            booksCategories.map(item => <option key={item}>{item}</option>)
+          }
+        </select>
+        <select className="forms__button-sort">
+          <option>relevance </option>
+          <option>newest</option>
+        </select>
+      </form>
     </section>
   )
 }
